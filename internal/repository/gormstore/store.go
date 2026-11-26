@@ -32,7 +32,6 @@ func Open(driver, dsn string) (repository.Store, error) {
 	if os.Getenv("EZSTORE_DEBUG") != "" {
 		gormLogger = logger.Default.LogMode(logger.Info)
 	}
-
 	var dialector gorm.Dialector
 	switch driver {
 	case "sqlite":
